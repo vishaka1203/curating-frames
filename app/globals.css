@@ -1286,3 +1286,9 @@ footer {
     transform: none;
   }
 }
+
+.footer-top > a.instagram-link {
+  width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
