@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowUp } from "lucide-react";
 import { contact } from "@/lib/content";
 export function Invitation() {
   return (
@@ -18,52 +18,82 @@ export function Invitation() {
 }
 export function Footer() {
   return (
-    <footer>
-      <div className="footer-top">
-        <Link href="/" className="wordmark">
-          curating<span>FRAMES</span>
-        </Link>
-        <p>
-          For the moments.
-          <br />
-          For the feeling. For you.
-        </p>
-        <a
-          href={contact.instagram}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-          className="instagram-link"
-        >
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            aria-hidden="true"
+    <footer className="site-footer" aria-label="Studio information">
+      <div className="footer-main">
+        <div className="footer-brand">
+          <div>
+            <Link
+              href="/"
+              className="wordmark"
+              aria-label="Curating Frames home"
+            >
+              curating<span>FRAMES</span>
+            </Link>
+            <p className="footer-tagline">
+              For the moments.
+              <br />
+              For the feeling. For you.
+            </p>
+          </div>
+          <a
+            href={contact.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Curating Frames on Instagram (opens in a new tab)"
+            className="footer-instagram"
           >
-            <rect x="3" y="3" width="18" height="18" rx="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="1"
-              fill="currentColor"
-              stroke="none"
-            />
-          </svg>
-        </a>
-        <a href={`mailto:${contact.email}`}>
-          {contact.email}
-          <ArrowUpRight size={16} />
-        </a>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+        </div>
+        <nav className="footer-explore" aria-labelledby="footer-explore-title">
+          <h2 className="footer-label" id="footer-explore-title">
+            Explore
+          </h2>
+          <Link href="/portfolio">Our work</Link>
+          <Link href="/about">Our story</Link>
+          <Link href="/contact">Enquire</Link>
+        </nav>
+        <div className="footer-contact">
+          <h2 className="footer-label">Get in touch</h2>
+          <a className="footer-email" href={`mailto:${contact.email}`}>
+            <span>{contact.email}</span>
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a className="footer-phone" href="tel:+918806119059">
+            {contact.phone}
+          </a>
+          <Link className="footer-enquiry" href="/contact">
+            Tell us about your celebration{" "}
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </Link>
+        </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-utility">
         <span>© {new Date().getFullYear()} Curating Frames</span>
-        <span>PHOTOGRAPHS THAT FEEL LIKE YOU</span>
-        <Link href="/privacy">Privacy</Link>
+        <div>
+          <Link href="/privacy">Privacy</Link>
+          <a href="#main">
+            Back to top <ArrowUp size={13} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </footer>
   );
