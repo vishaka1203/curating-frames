@@ -1,6 +1,6 @@
 # Curating Frames
 
-An editorial photography website built in the existing project folder with Next.js App Router, React, strict TypeScript, Tailwind CSS, shadcn-style UI primitives, Radix Dialog, GSAP/ScrollTrigger and Lenis. All portfolio photographs are extracted from the client-provided PDF; no stock or reference-site photographs are used.
+An editorial photography website built in the existing project folder with Next.js App Router, React, strict TypeScript, Tailwind CSS, shadcn-style UI primitives, Radix Dialog, GSAP/ScrollTrigger and browser-native scrolling. All portfolio photographs are extracted from the client-provided PDF; no stock or reference-site photographs are used.
 
 ## Run locally
 

@@ -8,23 +8,12 @@ export function Animations() {
     if (preference.matches) return;
     let dispose = () => {};
     let stopped = false;
-    Promise.all([
-      import("gsap"),
-      import("gsap/ScrollTrigger"),
-      import("lenis"),
-    ]).then(([{ gsap }, { ScrollTrigger }, { default: Lenis }]) => {
-      if (stopped) return;
-      gsap.registerPlugin(ScrollTrigger);
-      const lenis = new Lenis({
-        autoRaf: true,
-        anchors: true,
-        smoothWheel: true,
-      });
-      lenis.on("scroll", ScrollTrigger.update);
-      const context = gsap.context(() => {
-        gsap.utils
-          .toArray<HTMLElement>(".reveal")
-          .forEach((element) =>
+    Promise.all([import("gsap"), import("gsap/ScrollTrigger")]).then(
+      ([{ gsap }, { ScrollTrigger }]) => {
+        if (stopped) return;
+        gsap.registerPlugin(ScrollTrigger);
+        const context = gsap.context(() => {
+          gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) =>
             gsap.fromTo(
               element,
               { y: 26 },
@@ -40,24 +29,24 @@ export function Animations() {
               },
             ),
           );
-        if (document.querySelector(".hero-photo"))
-          gsap.to(".hero-photo", {
-            yPercent: 7,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".hero",
-              start: "top top",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
-      });
-      dispose = () => {
-        context.revert();
-        lenis.destroy();
-      };
-      preference.addEventListener("change", onPreference);
-    });
+          if (document.querySelector(".hero-photo"))
+            gsap.to(".hero-photo", {
+              yPercent: 7,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+              },
+            });
+        });
+        dispose = () => {
+          context.revert();
+        };
+        preference.addEventListener("change", onPreference);
+      },
+    );
     function onPreference() {
       if (preference.matches) dispose();
     }

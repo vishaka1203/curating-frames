@@ -1134,17 +1134,6 @@ footer {
 .page-transition {
   animation: page-enter 0.45s ease both;
 }
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-.lenis:not(.lenis-autoToggle).lenis-stopped {
-  overflow: clip;
-}
-.lenis [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
 /* A restrained film treatment: one opening camera move, static grain, and deep shadows. */
 .hero {
   isolation: isolate;
