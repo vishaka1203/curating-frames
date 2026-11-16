@@ -1,0 +1,32 @@
+import entries from "@/data/projects.json";
+export type Project = {
+  title: string;
+  slug: string;
+  category: string;
+  description: string;
+  cover: string | null;
+  images: string[];
+  publishedAt: string;
+  featuredOrder?: number;
+  status: string;
+  externalGallery?: string;
+  eventDate?: string;
+  location?: string;
+  videoUrl?: string;
+};
+export function getProjects(): Project[] {
+  return (entries as Project[])
+    .filter((p) => p.status === "published")
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+}
+export function getFeatured() {
+  return getProjects()
+    .filter((p) => p.featuredOrder !== undefined)
+    .sort((a, b) => a.featuredOrder! - b.featuredOrder!);
+}
+export const contact = {
+  email: "curatingframes@gmail.com",
+  phone: "+91 88061 19059",
+  secondPhone: "+91 82610 63525",
+  instagram: "https://www.instagram.com/curatingframes/",
+};

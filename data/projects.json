@@ -1,0 +1,78 @@
+[
+  {
+    "title": "A little closer",
+    "slug": "a-little-closer",
+    "category": "Portraits",
+    "description": "Quiet moments, shared glances, and the simple joy of being together. A selection of couple portraits from the Curating Frames portfolio.",
+    "cover": "/images/pdf-3-3.webp",
+    "images": [
+      "pdf-3-3",
+      "pdf-3-2",
+      "pdf-3-5",
+      "pdf-3-6",
+      "pdf-3-7",
+      "pdf-3-4"
+    ],
+    "publishedAt": "2026-10-06",
+    "featuredOrder": 2,
+    "status": "published"
+  },
+  {
+    "title": "The joy of together",
+    "slug": "the-joy-of-together",
+    "category": "Engagements",
+    "description": "Flowers, family, and the beginning of a new chapter. A celebration of the people and moments that bring us together.",
+    "cover": "/images/pdf-4-6.webp",
+    "images": [
+      "pdf-4-6",
+      "pdf-4-1",
+      "pdf-4-2",
+      "pdf-4-3",
+      "pdf-4-4",
+      "pdf-4-5"
+    ],
+    "publishedAt": "2026-10-06",
+    "featuredOrder": 1,
+    "status": "published"
+  },
+  {
+    "title": "An evening to remember",
+    "slug": "an-evening-to-remember",
+    "category": "Celebrations",
+    "description": "Candlelit celebrations and the people who make them special. A celebration of the people and moments that bring us together.",
+    "cover": "/images/pdf-2-4.webp",
+    "images": [
+      "pdf-2-4",
+      "pdf-2-3",
+      "pdf-2-5",
+      "pdf-2-6",
+      "pdf-2-7",
+      "pdf-2-8"
+    ],
+    "publishedAt": "2026-10-06",
+    "featuredOrder": 3,
+    "status": "published"
+  },
+  {
+    "title": "Bani\u2019s 1st Birthday",
+    "slug": "bani-1st-birthday",
+    "category": "Birthdays",
+    "description": "A first birthday, a beautiful milestone. Explore the original client gallery on Pixieset.",
+    "cover": null,
+    "images": [],
+    "externalGallery": "https://curatingframes.pixieset.com/bani1stbday/",
+    "publishedAt": "2026-10-05",
+    "status": "published"
+  },
+  {
+    "title": "Pratik & Shubham",
+    "slug": "pratik-and-shubham",
+    "category": "Stories",
+    "description": "Discover this story through the original Curating Frames gallery on Pixieset.",
+    "cover": null,
+    "images": [],
+    "externalGallery": "https://curatingframes.pixieset.com/pratikandshubham/",
+    "publishedAt": "2026-10-04",
+    "status": "published"
+  }
+]
