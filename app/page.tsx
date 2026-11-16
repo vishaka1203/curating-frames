@@ -13,8 +13,8 @@ export default function Home() {
         <div className="hero-image-frame">
           <Image
             className="hero-photo"
-            src="/images/pheras-318.webp"
-            alt="The bride and groom beneath a flower-covered mandap as rose petals fall around them"
+            src="/images/pdf-1-2.webp"
+            alt="A couple embracing beside still water in an intimate black and white photograph"
             fill
             priority
             sizes="100vw"
@@ -97,8 +97,8 @@ export default function Home() {
       <section className="photo-essay">
         <div className="essay-photo">
           <Image
-            src="/images/pheras-138.webp"
-            alt="A black-and-white bridal portrait with flowers arranged in her hair"
+            src="/images/pdf-1-5.webp"
+            alt="A bride in a flowing dress silhouetted by a sunlit window"
             fill
             sizes="(max-width:700px) 100vw, 55vw"
           />
