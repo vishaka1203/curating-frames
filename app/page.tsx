@@ -10,14 +10,16 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <Image
-          className="hero-photo"
-          src="/images/pdf-1-2.webp"
-          alt="A couple embracing beside still water in an intimate black and white photograph"
-          fill
-          priority
-          sizes="100vw"
-        />
+        <div className="hero-image-frame">
+          <Image
+            className="hero-photo"
+            src="/images/pdf-1-2.webp"
+            alt="A couple embracing beside still water in an intimate black and white photograph"
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="hero-shade" />
         <div className="hero-topline">
           <span>PHOTOGRAPHY & CINEMATOGRAPHY</span>
