@@ -1,3 +1,4 @@
+import { getSiteUrl } from "@/lib/site-url";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -22,10 +23,9 @@ const sans = localFont({
   display: "swap",
   variable: "--font-sans",
 });
+const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteUrl || "http://localhost:3000"),
   title: {
     default: "Curating Frames — Stories worth remembering",
     template: "%s | Curating Frames",
@@ -56,9 +56,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "Curating Frames",
-              ...(process.env.NEXT_PUBLIC_SITE_URL
-                ? { url: process.env.NEXT_PUBLIC_SITE_URL }
-                : {}),
+              ...(siteUrl ? { url: siteUrl } : {}),
               email: "curatingframes@gmail.com",
               telephone: "+918806119059",
               sameAs: ["https://www.instagram.com/curatingframes/"],

@@ -41,10 +41,10 @@ See [CMS setup](docs/cms.md) for the prepared Sanity schema and future integrati
 ## Deployment
 
 1. Review the source audit and approve imagery for public portfolio use.
-2. Set `NEXT_PUBLIC_SITE_URL` to the real HTTPS domain, without a trailing slash. Without it, robots disallows indexing and sitemap remains empty to avoid publishing invented URLs.
+2. Set `NEXT_PUBLIC_SITE_URL` to the real HTTPS domain, without a trailing slash. On Vercel the assigned production domain is used automatically. Unconfigured local builds and Vercel previews disallow indexing.
 3. Set email variables and configure bot protection.
 4. Run checks and `npm run build`.
 5. Deploy to a Next.js Node-compatible host (for example Vercel). This is not a static-only export: image optimization and the enquiry route need a server.
 6. Verify domain, sitemap, Open Graph preview, and a real provider-backed test enquiry before announcing the site.
 
-No public deployment or external email was performed during development. See [content inventory](docs/content-inventory.md) and [QA](docs/qa.md).
+GitHub source: https://github.com/vishaka1203/curating-frames. Vercel deploys the main branch. Production metadata and sitemap use the assigned Vercel domain automatically; set NEXT_PUBLIC_SITE_URL when using a custom domain. Online enquiries still require the documented Resend configuration. No external test email was sent during development. See [content inventory](docs/content-inventory.md) and [QA](docs/qa.md).
