@@ -28,5 +28,7 @@ export const contact = {
   email: "curatingframes@gmail.com",
   phone: "+91 88061 19059",
   secondPhone: "+91 82610 63525",
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
+  whatsapp: "https://wa.me/918806119059",
   instagram: "https://www.instagram.com/curatingframes/",
 };
