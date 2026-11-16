@@ -1,6 +1,6 @@
 # Curating Frames
 
-An editorial photography website built in the existing project folder with Next.js App Router, React, strict TypeScript, Tailwind CSS, shadcn-style UI primitives, Radix Dialog, GSAP/ScrollTrigger and browser-native scrolling. All portfolio photographs are extracted from the client-provided PDF; no stock or reference-site photographs are used.
+An editorial photography website built in the existing project folder with Next.js App Router, React, strict TypeScript, Tailwind CSS, shadcn-style UI primitives, Radix Dialog, GSAP/ScrollTrigger and browser-native scrolling. Portfolio photographs come from the client-provided PDF and the explicitly shared Google Drive wedding folder; no stock or reference-site photographs are used.
 
 ## Run locally
 
@@ -18,11 +18,11 @@ Open http://127.0.0.1:3000. `npm run build` creates the production build; `npm s
 
 - `/`: cinematic homepage, featured collections and introduction
 - `/portfolio`: category filters and editorial project grid
-- `/portfolio/[slug]`: five stories, including Bani’s 1st Birthday and Pratik & Shubham
+- `/portfolio/[slug]`: six stories, including Bani’s 1st Birthday and Pratik & Shubham
 - `/about`, `/contact`, `/privacy`
 - sitemap, robots and a custom 404
 
-The two Pixieset projects link to their original galleries. Their imagery was not accessible, so no unrelated photographs are presented as those events. Three descriptive collections use the supplied PDF. Films is deliberately absent because no video files were supplied.
+The two Pixieset projects link to their original galleries. Their imagery was not accessible, so no unrelated photographs are presented as those events. The Pheras wedding collection uses eleven original Drive photographs. Three descriptive collections use the supplied PDF. Films is deliberately absent because no video files were supplied.
 
 ## Enquiries
 

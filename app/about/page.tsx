@@ -20,8 +20,8 @@ export default function About() {
       <section className="about-story section">
         <div className="about-image">
           <Image
-            src="/images/pdf-1-3.webp"
-            alt="A couple sharing a smile in a timeless black and white portrait"
+            src="/images/pheras-213.webp"
+            alt="The bride in a delicate veil, photographed in soft warm light"
             fill
             priority
             sizes="(max-width:700px) 100vw, 50vw"

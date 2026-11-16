@@ -1,0 +1,72 @@
+{
+  "sourceFolder": "https://drive.google.com/drive/folders/1MIu8sMg3AvTO843Jv2rsgppDcZp1Xa95",
+  "folderTitle": "4. Pheras",
+  "assets": [
+    {
+      "original": "WEDDING-188.jpg",
+      "originalDimensions": [5362, 3830],
+      "asset": "public/images/pheras-188.webp",
+      "optimizedBytes": 555138
+    },
+    {
+      "original": "WEDDING-43.jpg",
+      "originalDimensions": [3941, 5518],
+      "asset": "public/images/pheras-43.webp",
+      "optimizedBytes": 329982
+    },
+    {
+      "original": "WEDDING-95.jpg",
+      "originalDimensions": [4647, 6506],
+      "asset": "public/images/pheras-95.webp",
+      "optimizedBytes": 575262
+    },
+    {
+      "original": "WEDDING-138.jpg",
+      "originalDimensions": [6541, 4672],
+      "asset": "public/images/pheras-138.webp",
+      "optimizedBytes": 160886
+    },
+    {
+      "original": "WEDDING-318.jpg",
+      "originalDimensions": [5179, 3699],
+      "asset": "public/images/pheras-318.webp",
+      "optimizedBytes": 681384
+    },
+    {
+      "original": "WEDDING-329.jpg",
+      "originalDimensions": [7008, 4672],
+      "asset": "public/images/pheras-329.webp",
+      "optimizedBytes": 349700
+    },
+    {
+      "original": "WEDDING-337.jpg",
+      "originalDimensions": [4499, 6299],
+      "asset": "public/images/pheras-337.webp",
+      "optimizedBytes": 524558
+    },
+    {
+      "original": "WEDDING-185.jpg",
+      "originalDimensions": [6541, 4672],
+      "asset": "public/images/pheras-185.webp",
+      "optimizedBytes": 236198
+    },
+    {
+      "original": "WEDDING-174.jpg",
+      "originalDimensions": [6541, 4672],
+      "asset": "public/images/pheras-174.webp",
+      "optimizedBytes": 298444
+    },
+    {
+      "original": "WEDDING-213.jpg",
+      "originalDimensions": [6541, 4672],
+      "asset": "public/images/pheras-213.webp",
+      "optimizedBytes": 171186
+    },
+    {
+      "original": "WEDDING-89.jpg",
+      "originalDimensions": [4652, 6513],
+      "asset": "public/images/pheras-89.webp",
+      "optimizedBytes": 357776
+    }
+  ]
+}

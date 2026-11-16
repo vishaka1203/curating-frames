@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Curating Frames",
-    images: [{ url: "/images/pdf-1-2.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/pheras-318.webp", width: 2400, height: 1714 }],
   },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {

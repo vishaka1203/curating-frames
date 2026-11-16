@@ -41,3 +41,11 @@ https://www.houseontheclouds.com/ was reviewed for large photography, sparse fra
 - Client videos; Films route/navigation remains absent.
 - Public domain, email provider credentials and CMS credentials.
 - Public-use approval for identifiable people in the supplied photographs. Client-provided media is used locally as requested; no public launch was performed.
+
+## Shared Drive update — 16 November 2026
+
+The user explicitly supplied the public folder `https://drive.google.com/drive/folders/1MIu8sMg3AvTO843Jv2rsgppDcZp1Xa95` and requested its photographs for the site. It is titled “4. Pheras”. Although no Drive connector is installed, the folder is accessible without sign-in through the browser. At least 100 photographs loaded while browsing; the folder was not exhaustively downloaded.
+
+Eleven original JPEGs were downloaded using Drive’s visible download controls: WEDDING-43, 89, 95, 138, 174, 185, 188, 213, 318, 329 and 337. Optimized WebP derivatives (maximum 2400 pixels) are served locally; full-resolution originals remain outside the public website. `docs/drive-assets.json` records source filenames, dimensions and resulting asset sizes. No thumbnail is used as a final site photograph.
+
+A new Pheras wedding story uses these photos, with its publication date set to the import date. This is not an asserted event date. Couple names and venue are unverified and omitted. The homepage hero, photographic essay, About image and social preview now use Drive originals. Existing PDF collections and Pixieset stories are preserved without attributing Drive photos to unrelated events. Native scrolling remains unchanged.

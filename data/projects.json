@@ -1,5 +1,28 @@
 [
   {
+    "title": "Pheras",
+    "slug": "pheras",
+    "category": "Weddings",
+    "description": "A promise beneath a sky of petals. The quiet anticipation, the people who matter, and the joy of beginning a life together.",
+    "cover": "/images/pheras-318.webp",
+    "images": [
+      "pheras-213",
+      "pheras-138",
+      "pheras-43",
+      "pheras-174",
+      "pheras-185",
+      "pheras-95",
+      "pheras-188",
+      "pheras-89",
+      "pheras-329",
+      "pheras-318",
+      "pheras-337"
+    ],
+    "publishedAt": "2026-11-16",
+    "featuredOrder": 1,
+    "status": "published"
+  },
+  {
     "title": "A little closer",
     "slug": "a-little-closer",
     "category": "Portraits",
@@ -14,7 +37,7 @@
       "pdf-3-4"
     ],
     "publishedAt": "2026-10-06",
-    "featuredOrder": 2,
+    "featuredOrder": 3,
     "status": "published"
   },
   {
@@ -32,7 +55,7 @@
       "pdf-4-5"
     ],
     "publishedAt": "2026-10-06",
-    "featuredOrder": 1,
+    "featuredOrder": 2,
     "status": "published"
   },
   {
@@ -50,7 +73,7 @@
       "pdf-2-8"
     ],
     "publishedAt": "2026-10-06",
-    "featuredOrder": 3,
+    "featuredOrder": 4,
     "status": "published"
   },
   {
