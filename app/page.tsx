@@ -14,10 +14,11 @@ export default function Home() {
         <div className="hero-image-frame">
           <Image
             className="hero-photo"
-            src="/images/pdf-1-2.webp"
+            src="/images/carol-reuben-hero-clean.webp"
             alt="A couple embracing beside still water in an intimate black and white photograph"
             fill
             priority
+            quality={90}
             sizes="100vw"
           />
         </div>

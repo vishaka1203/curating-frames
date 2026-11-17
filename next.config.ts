@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
+  images: { qualities: [75, 90] },
   devIndicators: false,
   turbopack: { root: process.cwd() },
   async headers() {
