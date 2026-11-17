@@ -59,6 +59,11 @@ test("complete Drive imports retain every source photograph in a collection", ()
       ).size,
       folder.sourceCount,
     );
+    assert.equal(
+      new Set(folder.assets.map((item: { asset: string }) => item.asset)).size,
+      folder.sourceCount,
+      `${folder.key} source files must not overwrite one another`,
+    );
     for (const item of folder.assets) {
       assert.ok(
         published.has(item.asset),

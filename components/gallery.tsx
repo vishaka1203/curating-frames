@@ -66,18 +66,24 @@ export function Gallery({
           </Dialog.Trigger>
         ))}
       </div>
-      {visibleCount < images.length && (
+      {images.length > 36 && (
         <div className="gallery-more">
           <p aria-live="polite">
-            Showing {visibleCount} of {images.length} photographs
+            Showing {Math.min(visibleCount, images.length)} of {images.length}{" "}
+            photographs
           </p>
-          <button
-            className="text-link"
-            aria-controls="gallery-photos"
-            onClick={() => setVisibleCount((count) => count + 36)}
-          >
-            Show more photographs <ArrowRight size={17} aria-hidden="true" />
-          </button>
+          {visibleCount < images.length && (
+            <button
+              className="text-link"
+              aria-controls="gallery-photos"
+              onClick={() => {
+                pendingFocus.current = visibleCount;
+                setVisibleCount((count) => Math.min(count + 36, images.length));
+              }}
+            >
+              Show more photographs <ArrowRight size={17} aria-hidden="true" />
+            </button>
+          )}
         </div>
       )}
       <Dialog.Portal>
