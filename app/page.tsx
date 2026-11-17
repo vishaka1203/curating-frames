@@ -85,7 +85,15 @@ export default function Home() {
         </div>
         <div className="featured-grid">
           {featured.slice(0, 2).map((p, i) => (
-            <ProjectCard key={p.slug} project={p} index={i} />
+            <ProjectCard
+              key={p.slug}
+              project={{
+                ...p,
+                cover: p.featuredCover ?? p.cover,
+                coverPosition: p.featuredCoverPosition ?? p.coverPosition,
+              }}
+              index={i}
+            />
           ))}
         </div>
         <div className="story-note">

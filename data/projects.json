@@ -801,7 +801,9 @@
     "featuredOrder": 1,
     "galleryLayout": "grid",
     "status": "published",
-    "collectionOrder": 7
+    "collectionOrder": 7,
+    "featuredCover": "/images/day2-ggp0284.webp",
+    "featuredCoverPosition": "50% 10%"
   },
   {
     "title": "Live on stage",
@@ -823,7 +825,9 @@
     "featuredOrder": 2,
     "galleryLayout": "grid",
     "status": "published",
-    "collectionOrder": 8
+    "collectionOrder": 8,
+    "featuredCover": "/images/day2-ggp0417.webp",
+    "featuredCoverPosition": "60% 45%"
   },
   {
     "title": "By the pool",

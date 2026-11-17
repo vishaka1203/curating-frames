@@ -1,10 +1,21 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { getCollections, getProjects } from "../lib/content";
+import { getCollections, getFeatured, getProjects } from "../lib/content";
 const media = JSON.parse(
   readFileSync(new URL("../data/media.json", import.meta.url), "utf8"),
 );
+test("homepage features use different photographs from collection covers", () => {
+  const covers = new Set(getCollections().map((project) => project.cover));
+  for (const project of getFeatured()) {
+    const cover = project.featuredCover ?? project.cover;
+    assert.ok(cover);
+    assert.ok(!covers.has(cover), `${project.title} repeats a collection cover`);
+    const id = cover.replace("/images/", "").replace(".webp", "");
+    assert.ok(project.images.includes(id));
+    assert.ok(media[id]?.alt);
+  }
+});
 test("each collection cover belongs to its published photo story", () => {
   const collections = getCollections();
   assert.ok(collections.length > 0);

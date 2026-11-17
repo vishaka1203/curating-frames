@@ -8,6 +8,8 @@ export type Project = {
   images: string[];
   publishedAt: string;
   featuredOrder?: number;
+  featuredCover?: string;
+  featuredCoverPosition?: string;
   collectionOrder?: number;
   coverPosition?: string;
   galleryLayout?: "grid" | "editorial";
