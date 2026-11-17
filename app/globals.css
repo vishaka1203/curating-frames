@@ -1469,3 +1469,213 @@ img {
     width: 100%;
   }
 }
+
+/* Collection covers: a full-width image wall, with each image opening its story. */
+.collections {
+  background: var(--paper);
+  padding-top: 32px;
+}
+.collections-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 24px 6% 44px;
+}
+.collections-heading h2 {
+  margin-top: 16px;
+}
+.collections-heading > p {
+  color: var(--muted);
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px;
+}
+.collection-cover {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: #e6e0d5;
+  isolation: isolate;
+}
+.collection-cover > img {
+  transition: transform 1s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.collection-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(15, 20, 17, 0.7));
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.collection-caption {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  color: #fff;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s,
+    transform 0.4s;
+}
+.collection-caption .eyebrow {
+  display: block;
+  font-size: 9px;
+  color: #f0eadf;
+}
+.collection-title {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 46px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+.collection-caption > svg {
+  flex-shrink: 0;
+  margin-bottom: 3px;
+}
+.collection-cover:hover > img {
+  transform: scale(1.035);
+}
+.collection-cover:hover::after,
+.collection-cover:focus-visible::after {
+  opacity: 1;
+}
+.collection-cover:hover .collection-caption,
+.collection-cover:focus-visible .collection-caption {
+  opacity: 1;
+  transform: none;
+}
+.collection-cover:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -7px;
+}
+.collections-bottom {
+  padding: 28px 6% 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.collections-bottom > .eyebrow {
+  color: var(--muted);
+  font-size: 9px;
+}
+.gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+.gallery-heading > p:last-child {
+  font-size: 11px;
+  color: var(--muted);
+}
+.gallery-contact-sheet {
+  gap: 3px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.gallery-contact-sheet .gallery-image {
+  aspect-ratio: 1;
+  width: 100%;
+}
+.gallery-contact-sheet .gallery-image:nth-child(3n) {
+  grid-column: auto;
+}
+.gallery-contact-sheet .gallery-image img,
+.gallery-contact-sheet .gallery-image:nth-child(3n) img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-contact-sheet .gallery-image:hover img {
+  transform: scale(1.025);
+}
+.gallery-contact-sheet .gallery-image > svg {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.gallery-contact-sheet .gallery-image:hover > svg,
+.gallery-contact-sheet .gallery-image:focus-visible > svg {
+  opacity: 1;
+}
+@media (hover: none), (max-width: 700px) {
+  .collection-cover::after {
+    opacity: 0.85;
+  }
+  .collection-caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 700px) {
+  .collections {
+    padding-top: 8px;
+  }
+  .collections-heading {
+    padding: 24px 7% 30px;
+    display: block;
+  }
+  .collections-heading h2 {
+    font-size: 46px;
+  }
+  .collections-heading > p {
+    margin-top: 18px;
+    padding: 0;
+    font-size: 11px;
+  }
+  .collection-caption {
+    left: 8%;
+    right: 8%;
+    bottom: 9%;
+  }
+  .collection-title {
+    font-size: 29px;
+  }
+  .collection-caption .eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.13em;
+  }
+  .collection-caption > svg {
+    width: 17px;
+  }
+  .collections-bottom {
+    padding: 25px 7% 40px;
+  }
+  .collections-bottom > .eyebrow {
+    display: none;
+  }
+  .gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+@media (max-width: 599px) {
+  .collection-grid,
+  .gallery-contact-sheet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .collection-title {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+}

@@ -51,12 +51,13 @@ export default async function Project({
             fill
             priority
             sizes="100vw"
+            style={{ objectPosition: p.coverPosition ?? "50% 40%" }}
           />
         </div>
       )}
       <section className="section">
         {p.images.length > 0 ? (
-          <Gallery images={p.images} title={p.title} />
+          <Gallery images={p.images} title={p.title} layout={p.galleryLayout} />
         ) : (
           <div className="external-story">
             <p className="eyebrow">THE ORIGINAL GALLERY</p>

@@ -18,11 +18,11 @@ Open http://127.0.0.1:3000. `npm run build` creates the production build; `npm s
 
 - `/`: cinematic homepage, featured collections and introduction
 - `/portfolio`: category filters and editorial project grid
-- `/portfolio/[slug]`: six stories, including Bani’s 1st Birthday and Pratik & Shubham
+- `/portfolio/[slug]`: nine stories, including Bani’s 1st Birthday and Pratik & Shubham
 - `/about`, `/contact`, `/privacy`
 - sitemap, robots and a custom 404
 
-The two Pixieset projects link to their original galleries. Their imagery was not accessible, so no unrelated photographs are presented as those events. The Pheras wedding collection uses eleven original Drive photographs. Three descriptive collections use the supplied PDF. Films is deliberately absent because no video files were supplied.
+The two Pixieset projects link to their original galleries. Their imagery was not accessible, so no unrelated photographs are presented as those events. The homepage now includes a six-cover collection wall. The Pheras wedding collection uses eleven original Drive photographs; A seaside yes, Promises in bloom and Ever after add twenty-one original photographs/album pages from the client’s open Drive collections. Three descriptive collections use the supplied PDF. Films is deliberately absent because no video files were supplied.
 
 ## Enquiries
 

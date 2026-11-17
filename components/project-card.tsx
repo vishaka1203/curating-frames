@@ -20,6 +20,7 @@ export function ProjectCard({
             src={project.cover}
             alt={getMedia(project.cover).alt}
             fill
+            style={{ objectPosition: project.coverPosition ?? "50% 50%" }}
             sizes="(max-width: 700px) 100vw, 50vw"
           />
         ) : (

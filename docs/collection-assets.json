@@ -1,0 +1,205 @@
+{
+  "folders": {
+    "proposal": [
+      "https://drive.google.com/drive/folders/1QN4xirZDcuUzcJlaCs0QrIBlAxz6uWLq",
+      "https://drive.google.com/drive/folders/1_dH13HkpYnfXM3yIyPoSTPA2yndQOSRw"
+    ],
+    "in-bloom": [
+      "https://drive.google.com/drive/folders/1GwMWGXz6wSuEQbqXihS7fpBTbIiUJc3R"
+    ],
+    "ever-after": [
+      "https://drive.google.com/drive/folders/1GiyuXRP_PSF3hXsp8EYG3DgidYkl4OU6"
+    ]
+  },
+  "assets": [
+    {
+      "collection": "proposal",
+      "name": "_SID4237.jpg",
+      "asset": "proposal-sid4237",
+      "originalDimensions": [6258, 4470],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 157240
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID4094.jpg",
+      "asset": "proposal-sid4094",
+      "originalDimensions": [4526, 6337],
+      "width": 1714,
+      "height": 2400,
+      "optimizedBytes": 255946
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID3873.jpg",
+      "asset": "proposal-sid3873",
+      "originalDimensions": [6218, 4441],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 369968
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID3776.jpg",
+      "asset": "proposal-sid3776",
+      "originalDimensions": [4184, 5858],
+      "width": 1714,
+      "height": 2400,
+      "optimizedBytes": 292202
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID4880.jpg",
+      "asset": "proposal-sid4880",
+      "originalDimensions": [3701, 5552],
+      "width": 1600,
+      "height": 2400,
+      "optimizedBytes": 224180
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID5071.jpg",
+      "asset": "proposal-sid5071",
+      "originalDimensions": [4195, 6292],
+      "width": 1600,
+      "height": 2400,
+      "optimizedBytes": 147760
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID4607.jpg",
+      "asset": "proposal-sid4607",
+      "originalDimensions": [6798, 4532],
+      "width": 2400,
+      "height": 1600,
+      "optimizedBytes": 175702
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID5013.jpg",
+      "asset": "proposal-sid5013",
+      "originalDimensions": [6176, 4117],
+      "width": 2400,
+      "height": 1600,
+      "optimizedBytes": 317880
+    },
+    {
+      "collection": "proposal",
+      "name": "_SID4957.jpg",
+      "asset": "proposal-sid4957",
+      "originalDimensions": [4435, 6652],
+      "width": 1600,
+      "height": 2400,
+      "optimizedBytes": 123888
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07990.jpg",
+      "asset": "in-bloom-cfw07990",
+      "originalDimensions": [3980, 2843],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 368952
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07962.jpg",
+      "asset": "in-bloom-cfw07962",
+      "originalDimensions": [4069, 2906],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 401208
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07398.jpg",
+      "asset": "in-bloom-cfw07398",
+      "originalDimensions": [3751, 2679],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 260972
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07139.jpg",
+      "asset": "in-bloom-cfw07139",
+      "originalDimensions": [3970, 2836],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 404186
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07126.jpg",
+      "asset": "in-bloom-cfw07126",
+      "originalDimensions": [4608, 3072],
+      "width": 2400,
+      "height": 1600,
+      "optimizedBytes": 231650
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW07098-Edit.jpg",
+      "asset": "in-bloom-cfw07098-edit",
+      "originalDimensions": [3989, 2849],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 477642
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW06920.jpg",
+      "asset": "in-bloom-cfw06920",
+      "originalDimensions": [3133, 2238],
+      "width": 2400,
+      "height": 1714,
+      "optimizedBytes": 285722
+    },
+    {
+      "collection": "in-bloom",
+      "name": "CFW06796.jpg",
+      "asset": "in-bloom-cfw06796",
+      "originalDimensions": [3006, 4209],
+      "width": 1714,
+      "height": 2400,
+      "optimizedBytes": 253764
+    },
+    {
+      "collection": "ever-after",
+      "name": "susan 2_49.jpg",
+      "asset": "ever-after-susan-249",
+      "originalDimensions": [5400, 3600],
+      "width": 2400,
+      "height": 1600,
+      "optimizedBytes": 297164
+    },
+    {
+      "collection": "ever-after",
+      "name": "susan 2_01.jpg",
+      "asset": "ever-after-susan-201",
+      "originalDimensions": [5400, 3600],
+      "width": 2400,
+      "height": 1600,
+      "optimizedBytes": 370178
+    },
+    {
+      "collection": "ever-after",
+      "name": "susan 2_12.jpg",
+      "asset": "ever-after-susan-212",
+      "originalDimensions": [10800, 3600],
+      "width": 2400,
+      "height": 800,
+      "optimizedBytes": 50740
+    },
+    {
+      "collection": "ever-after",
+      "name": "susan 2_37.jpg",
+      "asset": "ever-after-susan-237",
+      "originalDimensions": [10800, 3600],
+      "width": 2400,
+      "height": 800,
+      "optimizedBytes": 210838
+    }
+  ]
+}

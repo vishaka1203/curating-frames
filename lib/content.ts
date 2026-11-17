@@ -8,6 +8,9 @@ export type Project = {
   images: string[];
   publishedAt: string;
   featuredOrder?: number;
+  collectionOrder?: number;
+  coverPosition?: string;
+  galleryLayout?: "grid" | "editorial";
   status: string;
   externalGallery?: string;
   eventDate?: string;
@@ -23,6 +26,11 @@ export function getFeatured() {
   return getProjects()
     .filter((p) => p.featuredOrder !== undefined)
     .sort((a, b) => a.featuredOrder! - b.featuredOrder!);
+}
+export function getCollections() {
+  return getProjects()
+    .filter((project) => project.cover && project.collectionOrder !== undefined)
+    .sort((a, b) => a.collectionOrder! - b.collectionOrder!);
 }
 export const contact = {
   email: "curatingframes@gmail.com",

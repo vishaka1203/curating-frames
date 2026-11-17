@@ -29,6 +29,18 @@ export const projectSchema = {
     { name: "location", type: "string" },
     { name: "publishedAt", type: "datetime" },
     { name: "featuredOrder", type: "number" },
+    { name: "collectionOrder", type: "number" },
+    {
+      name: "coverPosition",
+      type: "string",
+      description: "CSS object position, e.g. 50% 40%",
+    },
+    {
+      name: "galleryLayout",
+      type: "string",
+      options: { list: ["editorial", "grid"] },
+      initialValue: "editorial",
+    },
     { name: "videoUrl", type: "url" },
     { name: "externalGallery", type: "url" },
     {

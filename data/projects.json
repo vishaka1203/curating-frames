@@ -1,5 +1,65 @@
 [
   {
+    "title": "A seaside yes",
+    "slug": "a-seaside-yes",
+    "category": "Proposals",
+    "description": "The sea, a sunset, and a question that changes everything. A collection of quiet anticipation and unguarded joy.",
+    "cover": "/images/proposal-sid5071.webp",
+    "coverPosition": "50% 38%",
+    "images": [
+      "proposal-sid4607",
+      "proposal-sid4237",
+      "proposal-sid4094",
+      "proposal-sid3873",
+      "proposal-sid3776",
+      "proposal-sid5013",
+      "proposal-sid4957",
+      "proposal-sid5071",
+      "proposal-sid4880"
+    ],
+    "publishedAt": "2026-11-17",
+    "collectionOrder": 1,
+    "galleryLayout": "grid",
+    "status": "published"
+  },
+  {
+    "title": "Ever after",
+    "slug": "ever-after",
+    "category": "Weddings",
+    "description": "Intimate portraits, familiar faces, and a celebration to keep close. Wedding photographs and album pages from a beautiful beginning.",
+    "cover": "/images/ever-after-susan-249.webp",
+    "images": [
+      "ever-after-susan-249",
+      "ever-after-susan-201",
+      "ever-after-susan-212",
+      "ever-after-susan-237"
+    ],
+    "publishedAt": "2026-11-17",
+    "collectionOrder": 2,
+    "status": "published"
+  },
+  {
+    "title": "Promises in bloom",
+    "slug": "promises-in-bloom",
+    "category": "Engagements",
+    "description": "A celebration in soft pink and white, from the smallest details to a dance beneath the stars.",
+    "cover": "/images/in-bloom-cfw07098-edit.webp",
+    "images": [
+      "in-bloom-cfw06796",
+      "in-bloom-cfw06920",
+      "in-bloom-cfw07126",
+      "in-bloom-cfw07139",
+      "in-bloom-cfw07098-edit",
+      "in-bloom-cfw07398",
+      "in-bloom-cfw07962",
+      "in-bloom-cfw07990"
+    ],
+    "publishedAt": "2026-11-17",
+    "collectionOrder": 4,
+    "galleryLayout": "grid",
+    "status": "published"
+  },
+  {
     "title": "Pheras",
     "slug": "pheras",
     "category": "Weddings",
@@ -19,7 +79,9 @@
       "pheras-337"
     ],
     "publishedAt": "2026-11-16",
-    "status": "published"
+    "status": "published",
+    "collectionOrder": 3,
+    "galleryLayout": "grid"
   },
   {
     "title": "A little closer",
@@ -37,7 +99,8 @@
     ],
     "publishedAt": "2026-10-06",
     "featuredOrder": 2,
-    "status": "published"
+    "status": "published",
+    "collectionOrder": 5
   },
   {
     "title": "The joy of together",
@@ -73,7 +136,8 @@
     ],
     "publishedAt": "2026-10-06",
     "featuredOrder": 3,
-    "status": "published"
+    "status": "published",
+    "collectionOrder": 6
   },
   {
     "title": "Bani\u2019s 1st Birthday",

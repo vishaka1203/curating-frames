@@ -1,3 +1,4 @@
+import { CollectionGrid } from "@/components/collection-grid";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Asterisk } from "lucide-react";
@@ -69,6 +70,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CollectionGrid />
       <section className="stories section">
         <div className="section-heading">
           <div>
