@@ -10,41 +10,43 @@ export default function Home() {
   const featured = getFeatured();
   return (
     <>
-      <section
-        className="hero hero-photo-first"
-        aria-label="A moment, kept forever"
-      >
+      <section className="hero">
         <div className="hero-image-frame">
           <Image
             className="hero-photo"
-            src="/images/hero-lakeside.webp"
+            src="/images/pdf-1-2.webp"
             alt="A couple embracing beside still water in an intimate black and white photograph"
             fill
             priority
-            quality={90}
             sizes="100vw"
           />
         </div>
         <div className="hero-shade" />
+        <div className="hero-topline">
+          <span>PHOTOGRAPHY & CINEMATOGRAPHY</span>
+          <span>LOVE. LIFE. EVERYTHING IN BETWEEN.</span>
+        </div>
+        <div className="hero-copy">
+          <p className="eyebrow">
+            THE BEAUTY OF A MOMENT. THE FEELING OF FOREVER.
+          </p>
+          <h1>
+            Some moments
+            <br />
+            deserve <em>forever.</em>
+          </h1>
+          <Link href="/portfolio" className="hero-link">
+            Step inside our stories <ArrowUpRight size={20} />
+          </Link>
+        </div>
         <div className="hero-bottom">
-          <a href="#opening-story" aria-label="Scroll to our story">
+          <span>REAL PEOPLE. BEAUTIFULLY TOLD.</span>
+          <a href="#introduction" aria-label="Scroll to introduction">
             SCROLL TO DISCOVER <ArrowDown size={16} />
           </a>
+          <span>A MOMENT, KEPT FOREVER</span>
         </div>
       </section>
-      <div className="opening-copy section" id="opening-story">
-        <p className="eyebrow">
-          THE BEAUTY OF A MOMENT. THE FEELING OF FOREVER.
-        </p>
-        <h1>
-          Some moments
-          <br />
-          deserve <em>forever.</em>
-        </h1>
-        <Link href="/portfolio" className="hero-link">
-          Step inside our stories <ArrowUpRight size={20} />
-        </Link>
-      </div>
       <section className="introduction section" id="introduction">
         <div className="intro-label">
           <Asterisk strokeWidth={1} size={38} />

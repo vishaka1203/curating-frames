@@ -2,7 +2,7 @@
 import { getMedia } from "@/lib/media";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, ArrowLeft, ArrowRight, Expand } from "lucide-react";
 export function Gallery({
   images,
@@ -14,7 +14,15 @@ export function Gallery({
   layout?: "editorial" | "grid";
 }) {
   const [index, setIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(36);
   const triggers = useRef<Array<HTMLButtonElement | null>>([]);
+  const pendingFocus = useRef<number | null>(null);
+  useEffect(() => {
+    if (pendingFocus.current !== null) {
+      triggers.current[pendingFocus.current]?.focus();
+      pendingFocus.current = null;
+    }
+  }, [visibleCount]);
   return (
     <Dialog.Root>
       {layout === "grid" && (
@@ -26,13 +34,14 @@ export function Gallery({
         </div>
       )}
       <div
+        id="gallery-photos"
         className={
           layout === "grid"
             ? "gallery-grid gallery-contact-sheet"
             : "gallery-grid"
         }
       >
-        {images.map((src, i) => (
+        {images.slice(0, visibleCount).map((src, i) => (
           <Dialog.Trigger
             key={src}
             ref={(element) => {
@@ -57,13 +66,32 @@ export function Gallery({
           </Dialog.Trigger>
         ))}
       </div>
+      {visibleCount < images.length && (
+        <div className="gallery-more">
+          <p aria-live="polite">
+            Showing {visibleCount} of {images.length} photographs
+          </p>
+          <button
+            className="text-link"
+            aria-controls="gallery-photos"
+            onClick={() => setVisibleCount((count) => count + 36)}
+          >
+            Show more photographs <ArrowRight size={17} aria-hidden="true" />
+          </button>
+        </div>
+      )}
       <Dialog.Portal>
         <Dialog.Overlay className="lightbox-overlay" />
         <Dialog.Content
           className="lightbox"
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            triggers.current[index]?.focus();
+            if (index < visibleCount) {
+              triggers.current[index]?.focus();
+            } else {
+              pendingFocus.current = index;
+              setVisibleCount(Math.ceil((index + 1) / 36) * 36);
+            }
           }}
           onKeyDown={(e) => {
             if (e.key === "ArrowRight") {

@@ -33,3 +33,37 @@ test("all published gallery images have metadata and a local optimized asset", (
       );
     }
 });
+
+test("complete Drive imports retain every source photograph in a collection", () => {
+  const imports = JSON.parse(
+    readFileSync(
+      new URL("../data/collection-imports.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const published = new Set(
+    getCollections().flatMap((project) => project.images),
+  );
+  for (const folder of imports.folders) {
+    assert.equal(
+      folder.assets.length,
+      folder.sourceCount,
+      `${folder.key} import is incomplete`,
+    );
+    assert.equal(
+      new Set(
+        folder.assets.map(
+          (item: { source: string; sourceId?: string }) =>
+            item.sourceId ?? item.source,
+        ),
+      ).size,
+      folder.sourceCount,
+    );
+    for (const item of folder.assets) {
+      assert.ok(
+        published.has(item.asset),
+        `${folder.key}/${item.source} is missing from collections`,
+      );
+    }
+  }
+});
