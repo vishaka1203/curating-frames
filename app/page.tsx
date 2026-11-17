@@ -75,13 +75,13 @@ export default function Home() {
       <section className="stories section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">A FEW PAGES FROM OUR DIARY</p>
+            <p className="eyebrow">CELEBRITY SHOOTS & LIVE PERFORMANCES</p>
             <h2>
-              Life, <em>beautifully framed.</em>
+              In the spotlight. <em>In the moment.</em>
             </h2>
           </div>
           <Link className="text-link" href="/portfolio">
-            Explore our work <ArrowUpRight size={17} />
+            Explore the highlights <ArrowUpRight size={17} />
           </Link>
         </div>
         <div className="featured-grid">

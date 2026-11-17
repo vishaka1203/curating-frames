@@ -817,9 +817,9 @@ img {
     padding: 10px;
   }
   .hero {
-    height: calc(90svh - 80px);
+    height: calc(100svh - 80px);
     min-height: 570px;
-    max-height: 850px;
+    max-height: none;
   }
   .hero-photo {
     object-position: 55% center;
@@ -1108,16 +1108,6 @@ img {
       rgba(5, 9, 7, 0.35) 100%
     );
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  box-shadow:
-    inset 0 13px #181a17,
-    inset 0 -13px #181a17;
-  z-index: 3;
-  pointer-events: none;
-}
 .hero::after {
   content: "";
   position: absolute;
@@ -1206,11 +1196,6 @@ img {
   }
 }
 @media (max-width: 700px) {
-  .hero::before {
-    box-shadow:
-      inset 0 8px #181a17,
-      inset 0 -8px #181a17;
-  }
   .hero-shade {
     background:
       linear-gradient(
