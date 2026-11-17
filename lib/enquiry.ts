@@ -12,6 +12,7 @@ export const enquirySchema = z.object({
     "Birthday",
     "Celebration",
     "Portraits",
+    "Conference shoot",
     "Other",
   ]),
   eventDate: z.iso

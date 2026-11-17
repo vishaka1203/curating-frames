@@ -3,38 +3,27 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { enquirySchema, type Enquiry } from "@/lib/enquiry";
 import { useState } from "react";
+import { whatsappEnquiryUrl } from "@/lib/whatsapp-enquiry";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 export function EnquiryForm() {
   const [feedback, setFeedback] = useState("");
+  const [whatsappUrl, setWhatsappUrl] = useState("");
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting },
   } = useForm<Enquiry>({
     resolver: zodResolver(enquirySchema),
     defaultValues: { website: "" },
   });
-  async function submit(data: Enquiry) {
-    setFeedback("");
-    try {
-      const response = await fetch("/api/enquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const result = await response.json();
-      setFeedback(
-        result.message ||
-          "We couldn’t send this enquiry. Please email us directly.",
-      );
-      if (response.ok) reset();
-    } catch {
-      setFeedback(
-        "We couldn’t send this enquiry. Please email curatingframes@gmail.com directly.",
-      );
-    }
+  function submit(data: Enquiry) {
+    const url = whatsappEnquiryUrl(data);
+    setWhatsappUrl(url);
+    setFeedback(
+      "Your enquiry is ready. Tap Send in WhatsApp to send it to our studio.",
+    );
+    window.location.assign(url);
   }
   const field = (name: keyof Enquiry, label: string, type = "text") => (
     <div className="field">
@@ -83,6 +72,7 @@ export function EnquiryForm() {
               "Birthday",
               "Celebration",
               "Portraits",
+              "Conference shoot",
               "Other",
             ].map((v) => (
               <option key={v}>{v}</option>
@@ -123,14 +113,16 @@ export function EnquiryForm() {
       </div>
       <p className="form-note">
         By enquiring, you agree that we may use these details to respond to your
-        request. <a href="/privacy">Privacy details</a>.
+        request. Your details will open in WhatsApp for you to review and send.{" "}
+        <a href="/privacy">Privacy details</a>.
       </p>
       <Button disabled={isSubmitting} type="submit">
-        {isSubmitting ? "Sending your story…" : "Send your enquiry"}
+        {isSubmitting ? "Opening WhatsApp…" : "Enquire on WhatsApp"}
         <ArrowUpRight size={17} />
       </Button>
       <p role="status" className="form-feedback">
-        {feedback}
+        {feedback}{" "}
+        {whatsappUrl && <a href={whatsappUrl}>Open WhatsApp again</a>}
       </p>
     </form>
   );

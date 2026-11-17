@@ -17,9 +17,11 @@ export default function Privacy() {
         Please share only details necessary for your enquiry.
       </p>
       <p>
-        When online enquiries are configured, your message is processed by
-        Resend and sent to the studio’s email inbox. This website does not keep
-        enquiry submissions in a database or use advertising trackers.
+        When you submit the form, your details open in WhatsApp as a prepared
+        message to +91 88061 19059. You review and send it yourself in WhatsApp.
+        WhatsApp processes the message under its own privacy policy. This
+        website does not keep enquiry submissions in a database or use
+        advertising trackers.
       </p>
       <p>
         External Pixieset and Instagram links take you to services with their
