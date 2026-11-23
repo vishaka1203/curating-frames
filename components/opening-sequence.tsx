@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -27,16 +27,29 @@ export function OpeningSequence() {
     };
   }, []);
   if (!visible || path !== "/") return null;
+  const mobilePhoto = getImageProps({
+    src: "/images/carol-reuben-b4p09216.webp",
+    alt: "Carol and Reuben embracing beneath a veil at sunset",
+    fill: true,
+    sizes: "100vw",
+  }).props;
   return (
     <div className="opening-sequence" aria-label="Curating Frames opening">
       <div className="opening-image">
-        <Image
-          src="/images/carol-reuben-b4p09425-edit.webp"
-          alt="A bride and groom walking hand in hand beside the water"
-          fill
-          sizes="100vw"
-          priority
-        />
+        <picture>
+          <source
+            media="(max-width: 700px)"
+            srcSet={mobilePhoto.srcSet}
+            sizes="100vw"
+          />
+          <Image
+            src="/images/carol-reuben-b4p09425-edit.webp"
+            alt="Carol and Reuben together beside the water"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </picture>
       </div>
       <div className="opening-scrim" />
       <div className="opening-top">

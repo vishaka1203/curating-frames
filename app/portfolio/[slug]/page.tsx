@@ -44,7 +44,14 @@ export default async function Project({
         <p>{p.description}</p>
       </section>
       {p.cover && (
-        <div className="project-hero">
+        <div
+          className="project-hero"
+          style={
+            p.slug === "carol-and-reuben"
+              ? { height: "auto", minHeight: 0, aspectRatio: "3 / 2" }
+              : undefined
+          }
+        >
           <Image
             src={p.cover}
             alt={`${p.title} cover photograph`}
