@@ -18,10 +18,10 @@ export default function About() {
         </h1>
       </section>
       <section className="about-story section">
-        <div className="about-image">
+        <div className="about-image about-image-film">
           <Image
-            src="/images/pdf-1-3.webp"
-            alt="A couple sharing a smile in a timeless black and white portrait"
+            src="/images/carol-reuben-san06510.webp"
+            alt="Carol entering the church in her wedding gown and long veil"
             fill
             priority
             sizes="(max-width:700px) 100vw, 50vw"
@@ -44,6 +44,58 @@ export default function About() {
             Explore the work, find the photographs that speak to you, and tell
             us about the moments you want to remember.
           </p>
+        </div>
+      </section>
+      <section
+        className="creative-team section"
+        aria-labelledby="creative-team-heading"
+      >
+        <div className="creative-team-intro">
+          <p className="eyebrow">BEHIND THE CREATIVITY</p>
+          <h2 id="creative-team-heading">
+            Two perspectives.
+            <br />
+            <em>One shared feeling.</em>
+          </h2>
+          <p>
+            Neha V Parab and Sidarth A Nandodakar are the creative people behind
+            Curating Frames. Together, they bring a thoughtful eye to the
+            laughter, quiet glances and little moments that make every story its
+            own.
+          </p>
+          <p>
+            Their approach is easy and personal: help you feel comfortable, let
+            the day unfold, and create photographs that feel honest, warm and
+            timeless.
+          </p>
+        </div>
+        <div className="creative-team-portraits">
+          <figure>
+            <Image
+              src="/images/destination-portfolio-2-347.webp"
+              alt="Neha V Parab"
+              width={1080}
+              height={1193}
+              sizes="(max-width:700px) 85vw, 30vw"
+            />
+            <figcaption>
+              <h3>Neha V Parab</h3>
+              <p>Curating Frames</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <Image
+              src="/images/destination-portfolio-2-350.webp"
+              alt="Sidarth A Nandodakar"
+              width={1179}
+              height={1205}
+              sizes="(max-width:700px) 85vw, 30vw"
+            />
+            <figcaption>
+              <h3>Sidarth A Nandodakar</h3>
+              <p>Curating Frames</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
       <section className="approach section">

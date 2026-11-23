@@ -963,7 +963,6 @@
     "description": "A sunlit gathering filled with family, flowers, and little moments to remember.",
     "cover": "/images/birthday-sak6627.webp",
     "publishedAt": "2026-11-17",
-    "collectionOrder": 10,
     "galleryLayout": "grid",
     "status": "published",
     "images": [
@@ -1587,5 +1586,24 @@
     "collectionOrder": 2,
     "galleryLayout": "grid",
     "status": "published"
+  },
+  {
+    "title": "Vows beneath the palms",
+    "slug": "destination-weddings",
+    "category": "Destination Weddings",
+    "description": "One wedding story, from bridal and groom portraits to the ceremony beneath the palms.",
+    "cover": "/images/destination-portfolio-7-489.webp",
+    "images": [
+      "destination-portfolio-4-406",
+      "destination-portfolio-4-409",
+      "destination-portfolio-5-425",
+      "destination-portfolio-5-428",
+      "destination-portfolio-7-483",
+      "destination-portfolio-7-489"
+    ],
+    "publishedAt": "2026-11-23",
+    "galleryLayout": "grid",
+    "status": "published",
+    "collectionOrder": 12
   }
 ]

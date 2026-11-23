@@ -108,8 +108,8 @@ export default function Home() {
       <section className="photo-essay">
         <div className="essay-photo">
           <Image
-            src="/images/pdf-1-5.webp"
-            alt="A bride in a flowing dress silhouetted by a sunlit window"
+            src="/images/bridal-window-film.webp"
+            alt="A bride beside a sunlit window, with soft black-and-white film grain"
             fill
             sizes="(max-width:700px) 100vw, 55vw"
           />

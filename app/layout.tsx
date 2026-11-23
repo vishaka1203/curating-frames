@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { OpeningSequence } from "@/components/opening-sequence";
 import { Animations } from "@/components/animations";
 const editorial = localFont({
   src: [
@@ -45,6 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <OpeningSequence />
         <Header />
         <main id="main">{children}</main>
         <Footer />

@@ -53,7 +53,7 @@ test("complete Drive imports retain every source photograph in a collection", ()
     ),
   );
   const published = new Set(
-    getCollections().flatMap((project) => project.images),
+    getProjects().flatMap((project) => project.images),
   );
   for (const folder of imports.folders) {
     assert.equal(

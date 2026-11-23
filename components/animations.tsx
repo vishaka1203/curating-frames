@@ -13,22 +13,46 @@ export function Animations() {
         if (stopped) return;
         gsap.registerPlugin(ScrollTrigger);
         const context = gsap.context(() => {
-          gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) =>
-            gsap.fromTo(
-              element,
-              { y: 26 },
-              {
-                y: 0,
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                  trigger: element,
-                  start: "top 93%",
-                  once: true,
+          gsap.utils
+            .toArray<HTMLElement>(
+              ".reveal, .section-heading, .intro-copy, .about-story, .project-intro, .invitation",
+            )
+            .forEach((element) =>
+              gsap.fromTo(
+                element,
+                { y: 26 },
+                {
+                  y: 0,
+                  duration: 1,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: element,
+                    start: "top 93%",
+                    once: true,
+                  },
                 },
-              },
-            ),
-          );
+              ),
+            );
+          gsap.utils
+            .toArray<HTMLElement>(".collection-cover")
+            .forEach((element, index) => {
+              gsap.fromTo(
+                element,
+                { y: 32, opacity: 0.4 },
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 0.85,
+                  delay: (index % 3) * 0.07,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: element,
+                    start: "top 96%",
+                    once: true,
+                  },
+                },
+              );
+            });
           if (document.querySelector(".hero-photo"))
             gsap.to(".hero-photo", {
               yPercent: 7,
