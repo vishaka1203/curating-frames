@@ -28,9 +28,10 @@ export function OpeningSequence() {
   }, []);
   if (!visible || path !== "/") return null;
   const mobilePhoto = getImageProps({
-    src: "/images/carol-reuben-b4p09216.webp",
+    src: "/images/opening-mobile-portrait.webp",
     alt: "Carol and Reuben embracing beneath a veil at sunset",
     fill: true,
+    quality: 90,
     sizes: "100vw",
   }).props;
   return (
@@ -48,6 +49,7 @@ export function OpeningSequence() {
             fill
             sizes="100vw"
             priority
+            quality={90}
           />
         </picture>
       </div>

@@ -1970,3 +1970,66 @@ img {
     margin-top: 14px;
   }
 }
+
+/* Phone opening: a dedicated portrait export keeps pixel density and faces clear. */
+@media (max-width: 700px) {
+  .opening-sequence {
+    height: 100dvh;
+  }
+  .opening-image {
+    animation: none;
+  }
+  .opening-image img {
+    object-position: 50% 50%;
+  }
+  .opening-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 16, 13, 0.28),
+      transparent 33%,
+      transparent 68%,
+      rgba(10, 16, 13, 0.58)
+    );
+  }
+  .opening-top {
+    top: max(22px, env(safe-area-inset-top));
+    left: 24px;
+    right: 24px;
+    font-size: 8px;
+    letter-spacing: 0.13em;
+  }
+  .opening-brand {
+    top: 19%;
+    width: 100%;
+  }
+  .opening-brand > span {
+    font-size: clamp(62px, 18vw, 88px);
+  }
+  .opening-brand strong {
+    font-size: 20px;
+    letter-spacing: 0.29em;
+    margin-top: 16px;
+  }
+  .opening-bottom {
+    left: 24px;
+    right: 24px;
+    bottom: max(28px, env(safe-area-inset-bottom));
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+  .opening-bottom > span {
+    font-family: var(--font-editorial), serif;
+    font-size: 21px;
+    line-height: 1.1;
+    max-width: 160px;
+  }
+  .opening-bottom button {
+    flex-shrink: 0;
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 1px solid #ffffff90;
+    background: transparent;
+    font-size: 11px;
+  }
+}
