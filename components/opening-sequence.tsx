@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export function OpeningSequence() {
   const path = usePathname();
   const [visible, setVisible] = useState(false);
+  const [ready, setReady] = useState(false);
   const initialPath = useRef(path);
   useEffect(() => {
     if (
@@ -15,7 +16,7 @@ export function OpeningSequence() {
     )
       return;
     const show = requestAnimationFrame(() => setVisible(true));
-    const finish = window.setTimeout(() => setVisible(false), 5000);
+    const finish = window.setTimeout(() => setVisible(false), 12000);
     const escape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setVisible(false);
     };
@@ -26,6 +27,11 @@ export function OpeningSequence() {
       window.removeEventListener("keydown", escape);
     };
   }, []);
+  useEffect(() => {
+    if (!ready) return;
+    const finish = window.setTimeout(() => setVisible(false), 5000);
+    return () => clearTimeout(finish);
+  }, [ready]);
   if (!visible || path !== "/") return null;
   const mobilePhoto = getImageProps({
     src: "/images/opening-mobile-portrait.webp",
@@ -35,7 +41,10 @@ export function OpeningSequence() {
     sizes: "100vw",
   }).props;
   return (
-    <div className="opening-sequence" aria-label="Curating Frames opening">
+    <div
+      className={`opening-sequence${ready ? " is-ready" : " is-loading"}`}
+      aria-label="Curating Frames opening"
+    >
       <div className="opening-image">
         <picture>
           <source
@@ -50,6 +59,16 @@ export function OpeningSequence() {
             sizes="100vw"
             priority
             quality={90}
+            onLoad={async (event) => {
+              const image = event.currentTarget;
+              try {
+                await image.decode();
+              } catch {
+                /* A loaded image can still be displayed. */
+              }
+              setReady(true);
+            }}
+            onError={() => setVisible(false)}
           />
         </picture>
       </div>

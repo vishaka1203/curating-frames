@@ -2033,3 +2033,24 @@ img {
     font-size: 11px;
   }
 }
+
+/* Start the title sequence only once the selected responsive photo is decoded. */
+.opening-sequence.is-loading {
+  background: #f6f4ee;
+  animation: none;
+}
+.opening-sequence.is-loading .opening-image {
+  opacity: 0;
+  animation: none;
+}
+.opening-sequence.is-loading .opening-scrim,
+.opening-sequence.is-loading .opening-top,
+.opening-sequence.is-loading .opening-brand,
+.opening-sequence.is-loading .opening-bottom,
+.opening-sequence.is-loading .opening-progress {
+  visibility: hidden;
+  animation: none;
+}
+.opening-sequence.is-ready .opening-image {
+  opacity: 1;
+}
