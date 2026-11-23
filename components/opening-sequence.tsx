@@ -1,6 +1,8 @@
 "use client";
 import Image, { getImageProps } from "next/image";
 import { useEffect, useRef, useState } from "react";
+import previews from "@/data/opening-previews.json";
+import type { CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 
 /** A short, skippable homepage title sequence; never blocks deep links. */
@@ -43,6 +45,12 @@ export function OpeningSequence() {
   return (
     <div
       className={`opening-sequence${ready ? " is-ready" : " is-loading"}`}
+      style={
+        {
+          "--opening-preview": `url("${previews.desktop}")`,
+          "--opening-preview-mobile": `url("${previews.mobile}")`,
+        } as CSSProperties
+      }
       aria-label="Curating Frames opening"
     >
       <div className="opening-image">

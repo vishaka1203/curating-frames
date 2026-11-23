@@ -2036,7 +2036,7 @@ img {
 
 /* Start the title sequence only once the selected responsive photo is decoded. */
 .opening-sequence.is-loading {
-  background: #f6f4ee;
+  background: #171b17 var(--opening-preview) center / cover no-repeat;
   animation: none;
 }
 .opening-sequence.is-loading .opening-image {
@@ -2053,4 +2053,10 @@ img {
 }
 .opening-sequence.is-ready .opening-image {
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .opening-sequence.is-loading {
+    background-image: var(--opening-preview-mobile);
+  }
 }
