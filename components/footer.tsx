@@ -137,23 +137,24 @@ export function Footer() {
       <div className="footer-utility">
         <span>© {new Date().getFullYear()} Curating Frames</span>
         {process.env.VERCEL_ENV === "production" && (
-          <a
+          <span
             className="visit-counter"
-            href="https://hits.sh/curating-frames.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Approximate site visits since November 26, 2026. Repeat visits are included."
+            tabIndex={0}
+            aria-label="Visits — focus or hover to view the count"
           >
-            <Image
-              src="https://hits.sh/curating-frames.vercel.app.svg?label=Site%20visits&color=555b4f&labelColor=79786f"
-              alt="Site visit count — includes repeat visits"
-              width={125}
-              height={20}
-              unoptimized
-              loading="eager"
-              referrerPolicy="no-referrer"
-            />
-          </a>
+            Visits
+            <span className="visit-counter-tooltip" role="tooltip">
+              <Image
+                src="https://hits.sh/curating-frames.vercel.app.svg?label=Visits&color=79786f&labelColor=79786f"
+                alt="Visit count — includes repeat visits"
+                width={110}
+                height={20}
+                unoptimized
+                loading="eager"
+                referrerPolicy="no-referrer"
+              />
+            </span>
+          </span>
         )}
         <div>
           <Link href="/privacy">Privacy</Link>
