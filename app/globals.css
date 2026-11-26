@@ -2060,3 +2060,13 @@ img {
     background-image: var(--opening-preview-mobile);
   }
 }
+
+.visit-counter {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.8;
+}
+.visit-counter img {
+  width: auto;
+  height: 18px;
+}

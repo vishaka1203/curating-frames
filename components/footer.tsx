@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, ArrowUp } from "lucide-react";
 import { contact } from "@/lib/content";
 export function Invitation() {
@@ -135,6 +136,25 @@ export function Footer() {
       </div>
       <div className="footer-utility">
         <span>© {new Date().getFullYear()} Curating Frames</span>
+        {process.env.VERCEL_ENV === "production" && (
+          <a
+            className="visit-counter"
+            href="https://hits.sh/curating-frames.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Approximate site visits since November 26, 2026. Repeat visits are included."
+          >
+            <Image
+              src="https://hits.sh/curating-frames.vercel.app.svg?label=Site%20visits&color=555b4f&labelColor=79786f"
+              alt="Site visit count — includes repeat visits"
+              width={125}
+              height={20}
+              unoptimized
+              loading="eager"
+              referrerPolicy="no-referrer"
+            />
+          </a>
+        )}
         <div>
           <Link href="/privacy">Privacy</Link>
           <a href="#main">

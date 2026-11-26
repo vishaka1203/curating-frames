@@ -24,6 +24,11 @@ export default function Privacy() {
         advertising trackers.
       </p>
       <p>
+        The footer includes a public visit counter provided by{" "}
+        <a href="https://hits.sh/privacy/">Hits</a>. It counts badge loads,
+        including repeat visits, rather than identifying unique people.
+      </p>
+      <p>
         External Pixieset and Instagram links take you to services with their
         own privacy policies. To ask about your enquiry information or request
         deletion, contact{" "}
