@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -32,34 +33,40 @@ export function Header() {
           </Link>
         ))}
       </nav>
-      <Link href="/contact" className="header-contact">
-        Let’s make memories <ArrowUpRight size={15} />
-      </Link>
-      <Dialog.Root open={open} onOpenChange={setOpen}>
-        <Dialog.Trigger className="menu-trigger" aria-label="Open navigation">
-          <Menu />
-        </Dialog.Trigger>
-        <Dialog.Portal>
-          <Dialog.Overlay className="menu-overlay" />
-          <Dialog.Content className="menu-panel">
-            <Dialog.Title className="eyebrow">CURATING FRAMES</Dialog.Title>
-            <Dialog.Description className="sr-only">
-              Explore our photography and enquire about your event.
-            </Dialog.Description>
-            <Dialog.Close className="menu-close" aria-label="Close navigation">
-              <X />
-            </Dialog.Close>
-            <nav aria-label="Mobile navigation">
-              {links.map(([url, label]) => (
-                <Link key={url} href={url} onClick={() => setOpen(false)}>
-                  {label}
-                  <ArrowUpRight />
-                </Link>
-              ))}
-            </nav>
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog.Root>
+      <div className="header-actions">
+        <Link href="/contact" className="header-contact">
+          Let’s make memories <ArrowUpRight size={15} />
+        </Link>
+        <ThemeToggle />
+        <Dialog.Root open={open} onOpenChange={setOpen}>
+          <Dialog.Trigger className="menu-trigger" aria-label="Open navigation">
+            <Menu />
+          </Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Overlay className="menu-overlay" />
+            <Dialog.Content className="menu-panel">
+              <Dialog.Title className="eyebrow">CURATING FRAMES</Dialog.Title>
+              <Dialog.Description className="sr-only">
+                Explore our photography and enquire about your event.
+              </Dialog.Description>
+              <Dialog.Close
+                className="menu-close"
+                aria-label="Close navigation"
+              >
+                <X />
+              </Dialog.Close>
+              <nav aria-label="Mobile navigation">
+                {links.map(([url, label]) => (
+                  <Link key={url} href={url} onClick={() => setOpen(false)}>
+                    {label}
+                    <ArrowUpRight />
+                  </Link>
+                ))}
+              </nav>
+            </Dialog.Content>
+          </Dialog.Portal>
+        </Dialog.Root>
+      </div>
     </header>
   );
 }

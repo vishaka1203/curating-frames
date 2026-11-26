@@ -41,8 +41,17 @@ export const metadata: Metadata = {
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${editorial.variable} ${sans.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${editorial.variable} ${sans.variable}`}
+    >
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('curating-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light'}catch(e){}`,
+          }}
+        />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

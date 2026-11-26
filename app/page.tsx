@@ -1,3 +1,4 @@
+import { IntroductionSilk } from "@/components/introduction-silk";
 import { CollectionGrid } from "@/components/collection-grid";
 import Image from "next/image";
 import Link from "next/link";
@@ -115,6 +116,7 @@ export default function Home() {
           />
         </div>
         <div className="essay-copy reveal">
+          <IntroductionSilk />
           <p className="eyebrow">THE IN-BETWEEN IS EVERYTHING</p>
           <h2>
             The fleeting.

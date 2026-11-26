@@ -1,10 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
+import { InvitationWaves } from "@/components/invitation-waves";
+import { VisitCounter } from "@/components/visit-counter";
 import { ArrowUpRight, ArrowUp } from "lucide-react";
 import { contact } from "@/lib/content";
 export function Invitation() {
   return (
     <section className="invitation">
+      <InvitationWaves />
       <p className="eyebrow">EVERY BEAUTIFUL STORY STARTS SOMEWHERE</p>
       <h2>
         Let’s make something
@@ -136,26 +138,7 @@ export function Footer() {
       </div>
       <div className="footer-utility">
         <span>© {new Date().getFullYear()} Curating Frames</span>
-        {process.env.VERCEL_ENV === "production" && (
-          <span
-            className="visit-counter"
-            tabIndex={0}
-            aria-label="Visits — focus or hover to view the count"
-          >
-            Visits
-            <span className="visit-counter-tooltip" role="tooltip">
-              <Image
-                src="https://hits.sh/curating-frames.vercel.app.svg?label=Visits&color=79786f&labelColor=79786f"
-                alt="Visit count — includes repeat visits"
-                width={110}
-                height={20}
-                unoptimized
-                loading="eager"
-                referrerPolicy="no-referrer"
-              />
-            </span>
-          </span>
-        )}
+        <VisitCounter />
         <div>
           <Link href="/privacy">Privacy</Link>
           <a href="#main">
