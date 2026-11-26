@@ -20,7 +20,11 @@ export default function Portfolio() {
         <p>A collection of love, life, and all that makes it yours.</p>
       </section>
       <section className="section portfolio-section">
-        <PortfolioGrid projects={getProjects()} />
+        <PortfolioGrid
+          projects={getProjects().filter(
+            (project) => project.slug !== "sehraj-birthday",
+          )}
+        />
       </section>
       <Invitation />
     </>
