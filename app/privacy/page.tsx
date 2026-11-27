@@ -24,9 +24,11 @@ export default function Privacy() {
         advertising trackers.
       </p>
       <p>
-        The footer includes a public visit counter provided by{" "}
-        <a href="https://hits.sh/privacy/">Hits</a>. It counts badge loads,
-        including repeat visits, rather than identifying unique people.
+        The footer shows a shared visit total. A signed, anonymous cookie lasts
+        24 hours so reloads and page navigation do not count as new visits in
+        the same browser during that period. Common automated crawlers are
+        excluded. The counter stores only an aggregate total, not names, contact
+        details, or browsing histories.
       </p>
       <p>
         External Pixieset and Instagram links take you to services with their
